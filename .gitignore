@@ -1,3 +1,7 @@
+# Archive
+_archive
+data
+
 # History files
 .Rhistory
 .Rapp.history
@@ -37,3 +41,4 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+inst/doc
