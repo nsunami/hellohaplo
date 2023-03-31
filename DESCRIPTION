@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Naoyuki", "Sunami", , "nsunami@pm.me", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-5482-8370"))
-Description: Working with Haplo API
+Description: Working with Haplo API.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
