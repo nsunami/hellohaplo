@@ -19,7 +19,7 @@ library(hellohaplo)
 ```
 
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 
 # Load the key
 key <- Sys.getenv("HAPLO_API_KEY")
