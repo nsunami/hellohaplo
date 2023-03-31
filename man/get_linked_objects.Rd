@@ -4,7 +4,11 @@
 \alias{get_linked_objects}
 \title{Get linked objects}
 \usage{
-get_linked_objects(obj_ref, sources = "NONE", key)
+get_linked_objects(
+  obj_ref,
+  sources = "NONE",
+  key = Sys.getenv("HAPLO_API_KEY")
+)
 }
 \arguments{
 \item{obj_ref}{Reference ID for the object}
