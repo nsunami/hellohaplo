@@ -1,5 +1,5 @@
 pluck_content <- function(res) {
   res |>
-    content(type = "text") |>
-    fromJSON()
+    httr::content(type = "text") |>
+    jsonlite::fromJSON()
 }

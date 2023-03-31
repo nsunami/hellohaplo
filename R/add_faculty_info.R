@@ -9,7 +9,7 @@
 #' x <- add_faculty_info("84190")
 add_faculty_info <- function(faculty_ref) {
   res <- get_object_info(faculty_ref) |>
-    content()
+    httr::content()
 
   faculty_name <- res$object$title
 
