@@ -16,5 +16,5 @@ A character
 Get the info about a faculty object
 }
 \examples{
-x <- add_faculty_info("84190")
+add_faculty_info("84190")
 }
