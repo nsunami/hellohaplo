@@ -33,9 +33,7 @@ get_linked_objects <- function(obj_ref, sources = "NONE",
     # Loop when there are more results
     while (res$results$more) {
       res <- run_query(obj_ref,
-        start = res$results$end,
-        key = key
-      )
+        start = res$results$end)
       new_data <- as.vector(res$refs)
       # bind to the df
       refs <- refs |>
