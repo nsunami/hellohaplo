@@ -73,6 +73,12 @@ content_842q0 |>
 #> [1] "84190"
 ```
 
+## Caveat
+
+Please note the funcions in this package are tested on the EUR’s
+instance and object model, and thus they may not work on the object
+model for non-EUR instance.
+
 ## Licensing
 
 All non-code materials are licensed under CC BY 4.0. All codes are under
