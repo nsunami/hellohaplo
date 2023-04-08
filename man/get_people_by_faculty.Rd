@@ -7,7 +7,8 @@
 get_people_by_faculty(
   faculty_ref,
   sources = "NONE",
-  key = Sys.getenv("HAPLO_API_KEY")
+  key = Sys.getenv("HAPLO_API_KEY"),
+  base_URL = Sys.getenv("HAPLO_BASE_URL")
 )
 }
 \arguments{
@@ -16,6 +17,8 @@ get_people_by_faculty(
 \item{sources}{Sources as per API}
 
 \item{key}{Haplo API Key}
+
+\item{base_URL}{The URL of the Haplo app}
 }
 \value{
 A character vector of refs
