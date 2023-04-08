@@ -42,7 +42,7 @@ a named object.
 res_84190 <- get_object_info("84190")
 res_84190
 #> Response [https://ethicsmonitor.eur.nl/api/v0-object/ref/84190?sources=ALL]
-#>   Date: 2023-04-01 15:21
+#>   Date: 2023-04-08 22:08
 #>   Status: 200
 #>   Content-Type: application/json; charset=utf-8
 #>   Size: 1.49 kB
