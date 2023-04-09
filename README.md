@@ -21,11 +21,16 @@ devtools::install_github("nsunami/hellohaplo")
 
 ## Usage
 
-First, set the environment variable `HAPLO_API_KEY` to your API Key.
+First, set the following environment variables:
+
+- `HAPLO_API_KEY` to your API Key.
+- `HAPLO_BASE_URL` to the hostname of the Haplo app (e.g., for EUR, it’s
+  <https://ethicsmonitor.eur.nl/>)
 
 ``` r
 library(hellohaplo)
 # Sys.setenv("HAPLO_API_KEY" = "YOUR_API_KEY_HERE")
+# Sys.setenv("HAPLO_BASE_URL" = "https://ethicsmonitor.eur.nl/")
 ```
 
 You can also use .Renviron to set your environment variable.
@@ -37,7 +42,7 @@ a named object.
 res_84190 <- get_object_info("84190")
 res_84190
 #> Response [https://ethicsmonitor.eur.nl/api/v0-object/ref/84190?sources=ALL]
-#>   Date: 2023-04-01 15:21
+#>   Date: 2023-04-08 22:08
 #>   Status: 200
 #>   Content-Type: application/json; charset=utf-8
 #>   Size: 1.49 kB
@@ -67,6 +72,12 @@ content_842q0 |>
   pluck_applicant()
 #> [1] "84190"
 ```
+
+## Caveat
+
+Please note the funcions in this package are tested on the EUR’s
+instance and object model, and thus they may not work on the object
+model for non-EUR instance.
 
 ## Licensing
 

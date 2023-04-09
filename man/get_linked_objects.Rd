@@ -7,7 +7,8 @@
 get_linked_objects(
   obj_ref,
   sources = "NONE",
-  key = Sys.getenv("HAPLO_API_KEY")
+  key = Sys.getenv("HAPLO_API_KEY"),
+  base_URL = Sys.getenv("HAPLO_BASE_URL")
 )
 }
 \arguments{
@@ -16,6 +17,8 @@ get_linked_objects(
 \item{sources}{Haplo API source}
 
 \item{key}{Haplo API Key}
+
+\item{base_URL}{The URL of the Haplo app}
 }
 \value{
 A vector of ref IDs linked to the input object
