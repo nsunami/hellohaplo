@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # hellohaplo
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/nsunami/hellohaplo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nsunami/hellohaplo/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of hellohaplo is to communicate with the [Haplo's REST API](https://docs.haplo.org/rest-api) from R.
