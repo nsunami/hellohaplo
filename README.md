@@ -4,6 +4,8 @@
 # hellohaplo
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/nsunami/hellohaplo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nsunami/hellohaplo/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of hellohaplo is to communicate with the [Haplo’s REST
@@ -26,11 +28,13 @@ First, set the following environment variables:
 - `HAPLO_API_KEY` to your API Key.
 - `HAPLO_BASE_URL` to the hostname of the Haplo app (e.g., for EUR, it’s
   <https://ethicsmonitor.eur.nl/>)
+- `ETHICS_APPLICATIONS_REF` to the ref of the ethics application
 
 ``` r
 library(hellohaplo)
 # Sys.setenv("HAPLO_API_KEY" = "YOUR_API_KEY_HERE")
 # Sys.setenv("HAPLO_BASE_URL" = "https://ethicsmonitor.eur.nl/")
+# Sys,setenv("ETHICS_APPLICATIONS_REF" = "YOUR_REF_FOR_ETHICS_APPLICATIONS")
 ```
 
 You can also use .Renviron to set your environment variable.
@@ -42,7 +46,7 @@ a named object.
 res_84190 <- get_object_info("84190")
 res_84190
 #> Response [https://ethicsmonitor.eur.nl/api/v0-object/ref/84190?sources=ALL]
-#>   Date: 2023-04-08 22:08
+#>   Date: 2023-06-20 20:22
 #>   Status: 200
 #>   Content-Type: application/json; charset=utf-8
 #>   Size: 1.49 kB
@@ -52,7 +56,6 @@ Use `get_content` to get an R object of the response.
 
 ``` r
 content_84190 <- get_content(res_84190)
-#> No encoding supplied: defaulting to UTF-8.
 content_84190$object$title
 #> [1] "Nami Sunami"
 ```
@@ -66,7 +69,6 @@ of pplicants.
 application_842q0 <- get_object_info("842q0")
 content_842q0 <- application_842q0 |>
   get_content()
-#> No encoding supplied: defaulting to UTF-8.
 # Get the applicants associated with the application
 content_842q0 |> 
   pluck_applicant()
