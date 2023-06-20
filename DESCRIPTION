@@ -18,5 +18,6 @@ Imports:
     dplyr,
     httr,
     jsonlite,
+    purrr,
     readr
 Config/testthat/edition: 3
