@@ -15,6 +15,9 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Imports: 
+    dplyr,
     httr,
-    jsonlite
+    jsonlite,
+    purrr,
+    readr
 Config/testthat/edition: 3

@@ -16,6 +16,7 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
       HAPLO_API_KEY: ${{ secrets.HAPLO_API_KEY }}
       HAPLO_BASE_URL: ${{ secrets.HAPLO_BASE_URL }}
+      ETHICS_APPLICATIONS_REF: ${{ secrets.ETHICS_APPLICATIONS_REF }}
     steps:
       - uses: actions/checkout@v3
 
