@@ -10,6 +10,6 @@
 #'   get_content()
 get_content <- function(res) {
   res |>
-    httr::content(type = "text") |>
+    httr::content(type = "text", encoding = "UTF-8") |>
     jsonlite::fromJSON()
 }
