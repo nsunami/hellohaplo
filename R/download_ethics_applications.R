@@ -1,11 +1,15 @@
 #' Download all ethics applications
 #'
+#' @param file output file
 #' @param ethics_application_ref the ref for ethics application set by the "ETHICS_APPLICATIONS_REF" env var
+#' @param sample_n the size of the sampled applications (optional)
 #'
 #' @return a tibble
 #' @export
 #'
 #' @examples
+#' tmp <- tempfile()
+#' download_ethics_applications(tmp, sample_n = 10)
 download_ethics_applications <- function(file,
     ethics_application_ref = Sys.getenv("ETHICS_APPLICATIONS_REF"),
     sample_n = NULL){
